@@ -32,6 +32,8 @@
 		4403D0C42C46D72D00D5AB19 /* CompanyListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403D0C32C46D72D00D5AB19 /* CompanyListModel.swift */; };
 		4403D0C62C46D80600D5AB19 /* CompanyListIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403D0C52C46D80600D5AB19 /* CompanyListIntent.swift */; };
 		4403D0C82C46DC6400D5AB19 /* CompanyDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403D0C72C46DC6400D5AB19 /* CompanyDetailsView.swift */; };
+		44183C902C47928300E41431 /* BookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44183C8F2C47928200E41431 /* BookmarkModel.swift */; };
+		44183C922C4792BE00E41431 /* BookmarkIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44183C912C4792BE00E41431 /* BookmarkIntent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		4403D0C32C46D72D00D5AB19 /* CompanyListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListModel.swift; sourceTree = "<group>"; };
 		4403D0C52C46D80600D5AB19 /* CompanyListIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyListIntent.swift; sourceTree = "<group>"; };
 		4403D0C72C46DC6400D5AB19 /* CompanyDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailsView.swift; sourceTree = "<group>"; };
+		44183C8F2C47928200E41431 /* BookmarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkModel.swift; sourceTree = "<group>"; };
+		44183C912C4792BE00E41431 /* BookmarkIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkIntent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +280,7 @@
 		4403D0AE2C46CDA000D5AB19 /* Intent */ = {
 			isa = PBXGroup;
 			children = (
+				44183C912C4792BE00E41431 /* BookmarkIntent.swift */,
 			);
 			path = Intent;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 		4403D0AF2C46CDA000D5AB19 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				44183C8F2C47928200E41431 /* BookmarkModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,8 +304,8 @@
 		4403D0B12C46CDA000D5AB19 /* BookmarkPage */ = {
 			isa = PBXGroup;
 			children = (
-				4403D0AE2C46CDA000D5AB19 /* Intent */,
 				4403D0AF2C46CDA000D5AB19 /* Model */,
+				4403D0AE2C46CDA000D5AB19 /* Intent */,
 				4403D0B02C46CDA000D5AB19 /* View */,
 			);
 			name = BookmarkPage;
@@ -454,6 +460,7 @@
 				4403D0AD2C46CD6800D5AB19 /* CompanySearchView.swift in Sources */,
 				4403D0A72C46C44500D5AB19 /* HttpClient.swift in Sources */,
 				4403D0B32C46CDD900D5AB19 /* BookmarkView.swift in Sources */,
+				44183C902C47928300E41431 /* BookmarkModel.swift in Sources */,
 				4403D0BD2C46D18100D5AB19 /* CompanySearchModel.swift in Sources */,
 				4403D0BB2C46D15A00D5AB19 /* CompanySearchIntent.swift in Sources */,
 				4403D0B82C46CFE100D5AB19 /* Company+CoreDataClass.swift in Sources */,
@@ -466,6 +473,7 @@
 				4403D0772C46BE7100D5AB19 /* CompanySearchApp.xcdatamodeld in Sources */,
 				4403D0AB2C46CC8100D5AB19 /* HomePage.swift in Sources */,
 				4403D0B52C46CE4500D5AB19 /* DBManager.swift in Sources */,
+				44183C922C4792BE00E41431 /* BookmarkIntent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

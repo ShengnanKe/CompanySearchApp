@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct BookmarkView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    @StateObject private var container: MVIContainer<BookmarkIntent, BookmarkModel>
+    
+    init() {
+        let model = BookmarkModel()
+        let intent = BookmarkIntent(model: model)
+        _container = StateObject(wrappedValue: MVIContainer(intent: intent, model: model, modelChangePublisher: model.objectWillChange))
     }
-}
-
-#Preview {
-    BookmarkView()
+    
+    var body: some View {
+        NavigationView {
+            List(container.model.bookmarkedCompanies, id: \.self) { company in
+                NavigationLink(destination: CompanyDetailsView(company: CompanyDetails(uuid: company.uuid, value: company.name, entityID: "N/A"))) {
+                    VStack(alignment: .leading) {
+                        Text(company.name ?? "Unknown Company")
+                            .font(.headline)
+                        Text(company.descri ?? "No description available")
+                            .font(.subheadline)
+                    }
+                }
+            }
+            .navigationTitle("Bookmarked Companies")
+            .onAppear {
+                container.intent.loadBookmarks()
+            }
+        }
+    }
 }
